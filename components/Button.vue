@@ -3,7 +3,7 @@
 
 export type ButtonProps = {
     size?: 'sm' | 'default',
-    font?: 'medium' | 'default'
+    font?: 'medium' | 'default',
 }
 
 defineProps<ButtonProps>();

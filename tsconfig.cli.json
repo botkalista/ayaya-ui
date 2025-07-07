@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "module": "nodenext",
+        "target": "esnext",
+        "skipLibCheck": true,
+        "outDir": "dist"
+    },
+    "include": [
+        "cli.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
