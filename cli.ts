@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import prompts from 'prompts';
-import fs from 'fs';
+import fs from 'fs-extra';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -39,7 +39,12 @@ async function main() {
 
     if (action === 'add_component') {
         const component = await selectComponent();
-        fs.copyFileSync(join(__dirname, `../components/${component}.vue`), `./components/ayaya-ui/${component}.vue`);
+        fs.ensureDirSync(join(__dirname, `../components/`));
+        fs.copyFileSync(
+            join(__dirname, `../components/${component}.vue`),
+            `./components/ayaya-ui/${component}.vue`
+        );
+        console.log(component, 'created.');
     }
 
 }
