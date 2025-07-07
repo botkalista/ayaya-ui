@@ -1,25 +1,18 @@
 {
   "name": "ayaya-ui",
   "version": "1.0.0",
-  "author": "Emily",
-  "private": true,
-  "type": "module",
-  "bin": "dist/cli.js",
-  "scripts": {
-    "build": "tsc -p tsconfig.cli.json",
-    "dev": "nuxt dev",
-    "postinstall": "tsc -p tsconfig.cli.json"
-  },
-  "dependencies": {
-    "@nuxtjs/tailwindcss": "^6.14.0",
-    "nuxt": "^3.17.6",
-    "vue": "^3.5.17",
-    "vue-router": "^4.5.1"
+  "bin": {
+    "ayaya-ui": "dist/cli.js"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
     "@types/prompts": "^2.4.9",
     "fs-extra": "^11.3.0",
     "prompts": "^2.4.2"
-  }
+  },
+  "scripts": {
+    "build": "tsc",
+    "postinstall": "tsc"
+  },
+  "author": "Emily"
 }
