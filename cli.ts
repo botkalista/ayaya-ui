@@ -39,7 +39,7 @@ async function main() {
 
     if (action === 'add_component') {
         const component = await selectComponent();
-        fs.ensureDirSync(join(__dirname, `../components/`));
+        fs.ensureDirSync( `./components/ayaya-ui/${component}.vue`);
         fs.copyFileSync(
             join(__dirname, `../components/${component}.vue`),
             `./components/ayaya-ui/${component}.vue`
