@@ -1,5 +1,6 @@
 {
   "name": "ayaya-ui",
+  "version": "1.0.0",
   "author": "Emily",
   "private": true,
   "type": "module",
