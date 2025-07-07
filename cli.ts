@@ -2,7 +2,8 @@
 import prompts from 'prompts';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import { dirname, join } from 'path';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -38,7 +39,7 @@ async function main() {
 
     if (action === 'add_component') {
         const component = await selectComponent();
-        fs.copyFileSync(__dirname + `../components/${component}.vue`, `./components/ayaya-ui/${component}.vue`);
+        fs.copyFileSync(join(__dirname + `../components/${component}.vue`), `./components/ayaya-ui/${component}.vue`);
     }
 
 }
